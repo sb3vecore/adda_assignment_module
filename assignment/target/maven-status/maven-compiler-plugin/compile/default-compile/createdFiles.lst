@@ -1,0 +1,8 @@
+com\example\Client.class
+com\example\User.class
+com\example\Apartment.class
+com\example\Booking.class
+com\example\BookingManager.class
+com\example\Facility.class
+com\example\PaymentCalculator.class
+com\example\Slot.class
