@@ -73,12 +73,18 @@ public class Facility {
             // iterate till the closest end time is found.
             for (Booking booking : bookings) {
                 // System.out.println(endTime  + " " + booking.startTime);
-                if (startTime.equals(booking.startTime) || endTime.equals(booking.endTime))
+                if (startTime.equals(booking.startTime) || endTime.equals(booking.endTime)) {
+                    System.out.println("Booking failed, already booked.");
                     return false;
-                else if (startTime.isBefore(booking.endTime) && endTime.isAfter(booking.startTime))
+                }
+                else if (startTime.isBefore(booking.endTime) && endTime.isAfter(booking.startTime)) {
+                    System.out.println("Booking failed, already booked.");
                     return false;
-                else if (startTime.isAfter(booking.startTime) && endTime.isBefore(booking.endTime))
+                }
+                else if (startTime.isAfter(booking.startTime) && endTime.isBefore(booking.endTime)) {
+                    System.out.println("Booking failed, already booked.");
                     return false; 
+                }
             }
             return true;
         }

@@ -34,7 +34,7 @@ public class BookingManager {
             Date date = new SimpleDateFormat("dd-MM-yyyy").parse(dateString);
             // Check if the facility has available slots for the specified time
             if (!facility.isBookingAvailable(date, b.startTime, b.endTime)) {
-                System.out.println("Booking failed, already booked.");
+                // System.out.println("Booking failed, already booked.");
                 return false;
             }
 
