@@ -32,7 +32,8 @@ public class Client {
         String[] inputs = {
                 "Clubhouse, 26-10-2020, 16:00 - 22:00",
                 "Tennis COUrt, 26-10-2020, 16:00 - 20:00",
-                "Clubhouse, 26-10-2020, 17:00 - 21:00"
+                "Clubhouse, 26-10-2020, 16:00 - 22:00",
+                "Tennis Court, 26-10-2020, 17:00 - 21:00"
         };
 
         // Process each booking request

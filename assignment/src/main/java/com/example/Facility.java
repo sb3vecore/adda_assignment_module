@@ -72,9 +72,13 @@ public class Facility {
             // check each slot for the lowest bound startTime.
             // iterate till the closest end time is found.
             for (Booking booking : bookings) {
-                if (!(endTime.isBefore(booking.startTime) || startTime.isAfter(booking.endTime))) {
-                    return false; // if booking overlaps with the requested time
-                }
+                // System.out.println(endTime  + " " + booking.startTime);
+                if (startTime.equals(booking.startTime) || endTime.equals(booking.endTime))
+                    return false;
+                else if (startTime.isBefore(booking.endTime) && endTime.isAfter(booking.startTime))
+                    return false;
+                else if (startTime.isAfter(booking.startTime) && endTime.isBefore(booking.endTime))
+                    return false; 
             }
             return true;
         }
